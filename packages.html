@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Surf &amp; Stay Packages — Weligama Bay Eco Villa</title>
+<meta name="description" content="Surf and stay packages at Weligama Bay Eco Villa — beginner-friendly surf lessons, private rooms, and Sri Lankan hospitality. From $220." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<style>
+  .pkg-hero{
+    position:relative; min-height:78vh; display:flex; align-items:flex-end;
+    padding: 160px 0 90px; overflow:hidden; color:var(--foam);
+  }
+  .pkg-hero-bg{
+    position:absolute; inset:0; background: url('assets/koggala_stick_fishing.jpg') center 60%/cover;
+    transform: scale(1.05);
+  }
+  .pkg-hero-veil{ position:absolute; inset:0; background: linear-gradient(180deg, rgba(8,20,18,0.35), rgba(8,20,18,0.9)); }
+  .pkg-hero .container{ position:relative; z-index:1; }
+  .pkg-hero h1{ color:var(--foam); font-size: clamp(2.2rem,4.8vw,3.6rem); max-width:16ch; margin-top:14px; }
+  .pkg-hero p{ margin-top:18px; max-width:52ch; color:rgba(238,247,242,0.82); line-height:1.7; }
+  .pkg-hero .btn{ margin-top:30px; }
+  .pkg-badge{
+    position:absolute; right: clamp(20px,5vw,56px); bottom: 90px; z-index:1;
+    padding: 16px 22px; border-radius:20px; text-align:right;
+  }
+  .pkg-badge strong{ display:block; font-family:var(--font-display); font-size:1.15rem; color:var(--foam); }
+  .pkg-badge span{ font-size:0.78rem; color:rgba(238,247,242,0.7); }
+  @media (max-width:760px){ .pkg-badge{ display:none; } }
+
+  .offers{ padding: 110px 0 60px; }
+  .pkg-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap: 26px; margin-top:50px; }
+  .pkg-card{
+    position:relative; border-radius: 26px; padding: 32px 28px 30px;
+    background: #fff;
+    box-shadow: 0 20px 50px -32px rgba(8,28,26,0.28);
+    display:flex; flex-direction:column;
+    transition: transform 0.5s var(--ease-liquid), box-shadow 0.5s ease;
+  }
+  .pkg-card:hover{ transform: translateY(-10px); box-shadow: 0 30px 60px -26px rgba(8,28,26,0.35); }
+  .pkg-card.featured{
+    background: linear-gradient(160deg, var(--lagoon-deep), #0b2420);
+    color: var(--foam);
+  }
+  .pkg-card.featured h3, .pkg-card.featured .pkg-days{ color: var(--foam); }
+  .pkg-badge-top{
+    align-self:flex-start;
+    font-size: 0.68rem; font-weight:800; letter-spacing:0.06em;
+    color: var(--ember); background: rgba(193,104,63,0.12);
+    padding: 6px 12px; border-radius:999px; margin-bottom:16px;
+  }
+  .pkg-card.featured .pkg-badge-top{ background: rgba(232,185,107,0.16); color: var(--gold-bright); }
+  .pkg-days{ font-size:0.78rem; color: rgba(14,43,40,0.5); font-weight:700; letter-spacing:0.02em; margin-bottom:6px; }
+  .pkg-card h3{ font-size: 1.3rem; margin-bottom:12px; }
+  .pkg-card .pkg-desc{ font-size:0.9rem; line-height:1.6; color:rgba(14,43,40,0.65); margin-bottom:20px; }
+  .pkg-card.featured .pkg-desc{ color: rgba(238,247,242,0.72); }
+  .pkg-list{ list-style:none; margin:0 0 26px; padding:0; display:flex; flex-direction:column; gap:10px; flex:1; }
+  .pkg-list li{ display:flex; gap:10px; font-size:0.87rem; align-items:flex-start; line-height:1.5; }
+  .pkg-list li svg{ min-width:16px; margin-top:3px; color: var(--gold); }
+  .pkg-price-row{ display:flex; align-items:baseline; justify-content:space-between; margin-bottom:18px; padding-top:16px; border-top:1px solid rgba(14,43,40,0.08); }
+  .pkg-card.featured .pkg-price-row{ border-top-color: rgba(255,255,255,0.12); }
+  .pkg-price-row .from{ font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; color:rgba(14,43,40,0.45); }
+  .pkg-card.featured .pkg-price-row .from{ color: rgba(238,247,242,0.5); }
+  .pkg-price{ font-family: var(--font-display); font-size:2rem; }
+  .pkg-card .btn{ width:100%; justify-content:center; }
+
+  .value-strip{ padding: 40px 0 110px; }
+  .value-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap:22px; }
+  .value-item{ text-align:center; padding: 30px 18px; border-radius:20px; background: var(--sand-dim); }
+  .value-item h4{ font-family:var(--font-display); font-size:1.1rem; margin-bottom:6px; }
+  .value-item p{ font-size:0.85rem; color:rgba(14,43,40,0.6); }
+  @media (max-width:960px){ .pkg-grid{ grid-template-columns: 1fr 1fr; } .value-grid{ grid-template-columns: 1fr 1fr; } }
+  @media (max-width:640px){ .pkg-grid{ grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<nav class="site-nav glass-dark" id="siteNav">
+  <a href="index.html" class="nav-brand"><span class="dot"></span>Weligama Bay <em style="font-style:italic;opacity:.8;margin-left:4px;">Eco Villa</em></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="packages.html" class="active">Packages</a></li>
+    <li><a href="rooms.html">Rooms</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/94774411513" class="nav-cta">Book on WhatsApp</a>
+  <button class="nav-toggle" aria-label="Open menu">
+    <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+</nav>
+
+<div class="mobile-drawer">
+  <div class="backdrop"></div>
+  <div class="drawer-card glass-dark">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="packages.html">Packages</a>
+    <a href="rooms.html">Rooms</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://wa.me/94774411513" class="drawer-cta">Book on WhatsApp</a>
+  </div>
+</div>
+
+<header class="pkg-hero">
+  <div class="pkg-hero-bg" data-parallax="0.12"></div>
+  <div class="pkg-hero-veil"></div>
+  <div class="container">
+    <p class="eyebrow" style="color:var(--gold-bright)">Surf &amp; Stay Packages</p>
+    <h1>Ride the waves of Weligama.</h1>
+    <p>Experience the ultimate surf getaway. Our premium packages combine comfortable private rooms, expert surf lessons, and authentic Sri Lankan hospitality tailored for all skill levels.</p>
+    <a href="#offers" class="btn btn-solid">View Offers ↓</a>
+  </div>
+  <div class="pkg-badge glass-dark">
+    <strong>Premium Surf Camp</strong>
+    <span>Weligama Bay</span>
+  </div>
+</header>
+
+<section class="offers" id="offers">
+  <div class="container">
+    <p class="eyebrow reveal">Our Offers</p>
+    <h2 class="reveal" style="font-size:clamp(1.8rem,3.4vw,2.6rem); margin-top:12px; max-width:16ch;">Choose your surf journey.</h2>
+
+    <div class="pkg-grid stagger">
+
+      <div class="pkg-card reveal">
+        <span class="pkg-badge-top">Beginner Surf Starter</span>
+        <span class="pkg-days">3 Days / 2 Lessons</span>
+        <h3>Beginner Surf Starter</h3>
+        <p class="pkg-desc">Perfect for a short surf getaway with comfort and coaching.</p>
+        <ul class="pkg-list">
+          <li>✓ 3 nights in a private room</li>
+          <li>✓ 2 beginner surf lessons</li>
+          <li>✓ Daily breakfast included</li>
+          <li>✓ Surfboard rental provided</li>
+        </ul>
+        <div class="pkg-price-row"><span class="from">From</span><span class="pkg-price">$220</span></div>
+        <a href="https://wa.me/94774411513?text=Hi!%20I'm%20interested%20in%20the%20Beginner%20Surf%20Starter%20package." class="btn btn-solid">Book on WhatsApp</a>
+      </div>
+
+      <div class="pkg-card reveal">
+        <span class="pkg-badge-top">Beginner Surf Learn</span>
+        <span class="pkg-days">4 Days / 4 Lessons</span>
+        <h3>Beginner Surf Learn</h3>
+        <p class="pkg-desc">Learn strong surf basics with consistent practice and support.</p>
+        <ul class="pkg-list">
+          <li>✓ 4 nights in a private room</li>
+          <li>✓ 4 surf lessons with expert coaching</li>
+          <li>✓ Daily breakfast included</li>
+          <li>✓ Unlimited surfboard use</li>
+        </ul>
+        <div class="pkg-price-row"><span class="from">From</span><span class="pkg-price">$300</span></div>
+        <a href="https://wa.me/94774411513?text=Hi!%20I'm%20interested%20in%20the%20Beginner%20Surf%20Learn%20package." class="btn btn-solid">Book on WhatsApp</a>
+      </div>
+
+      <div class="pkg-card featured reveal">
+        <span class="pkg-badge-top">🔥 Best Seller · 5 Days / 6 Lessons</span>
+        <h3>Beginner Surf Experience</h3>
+        <p class="pkg-desc">A balanced surf holiday with lessons, meals, and relaxation.</p>
+        <ul class="pkg-list">
+          <li>✓ 5 nights in a private room</li>
+          <li>✓ 6 surf lessons</li>
+          <li>✓ Daily breakfast and dinner</li>
+          <li>✓ Unlimited surfboard use</li>
+          <li>✓ 1 yoga or massage session</li>
+          <li>✓ Sunset beach experience</li>
+        </ul>
+        <div class="pkg-price-row"><span class="from">From</span><span class="pkg-price">$500</span></div>
+        <a href="https://wa.me/94774411513?text=Hi!%20I'm%20interested%20in%20the%20Beginner%20Surf%20Experience%20package." class="btn btn-solid">Book on WhatsApp</a>
+      </div>
+
+      <div class="pkg-card reveal">
+        <span class="pkg-badge-top">Beginner Surf Holiday</span>
+        <span class="pkg-days">6 Days / 8 Lessons</span>
+        <h3>Beginner Surf Holiday</h3>
+        <p class="pkg-desc">A full surf week for steady progress and extra perks.</p>
+        <ul class="pkg-list">
+          <li>✓ 6 nights in a private room</li>
+          <li>✓ 8 surf lessons</li>
+          <li>✓ Daily breakfast and dinner</li>
+          <li>✓ Unlimited surfboard use</li>
+          <li>✓ 2 yoga or massage sessions</li>
+          <li>✓ Special BBQ dinner night</li>
+        </ul>
+        <div class="pkg-price-row"><span class="from">From</span><span class="pkg-price">$600</span></div>
+        <a href="https://wa.me/94774411513?text=Hi!%20I'm%20interested%20in%20the%20Beginner%20Surf%20Holiday%20package." class="btn btn-solid">Book on WhatsApp</a>
+      </div>
+
+      <div class="pkg-card reveal">
+        <span class="pkg-badge-top">Beginner Pro Experience</span>
+        <span class="pkg-days">6 Days / 10 Lessons</span>
+        <h3>Beginner Pro Surf Experience</h3>
+        <p class="pkg-desc">Intensive surf training with premium comforts and extras.</p>
+        <ul class="pkg-list">
+          <li>✓ 6 nights in a private room</li>
+          <li>✓ 10 surf lessons</li>
+          <li>✓ Daily breakfast and dinner</li>
+          <li>✓ Unlimited surfboard use</li>
+          <li>✓ 2 yoga or massage sessions</li>
+          <li>✓ BBQ night and welcome drink</li>
+        </ul>
+        <div class="pkg-price-row"><span class="from">From</span><span class="pkg-price">$800</span></div>
+        <a href="https://wa.me/94774411513?text=Hi!%20I'm%20interested%20in%20the%20Beginner%20Pro%20Surf%20Experience%20package." class="btn btn-solid">Book on WhatsApp</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="value-strip">
+  <div class="container">
+    <div class="value-grid stagger">
+      <div class="value-item reveal"><h4>Premium</h4><p>High-quality surf coaching</p></div>
+      <div class="value-item reveal"><h4>Comfort</h4><p>Private room guarantee</p></div>
+      <div class="value-item reveal"><h4>Location</h4><p>Steps away from the waves</p></div>
+      <div class="value-item reveal"><h4>Support</h4><p>24/7 dedicated service</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand">Weligama Bay Eco Villa</div>
+      <p style="max-width:32ch">Surf, stay, and dine with relaxed beachside comfort just minutes from Weligama Bay.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="index.html">Home</a><br>
+      <a href="menu.html">Menu</a><br>
+      <a href="packages.html">Packages</a><br>
+      <a href="rooms.html">Rooms</a><br>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="tel:+94777436176">+94 777 436 176</a><br>
+      <a href="https://wa.me/94774411513">WhatsApp: 077 441 1513</a><br>
+      <p>No. 26 Vijecoon Watta Pelena, Weligama</p>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <p>Check-in from 14:00</p>
+      <p>Reception: 24/7</p>
+      <p>All prices in LKR &amp; USD</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Weligama Bay Eco Villa. All rights reserved.</span>
+    <span>Weligama, Southern Province, Sri Lanka</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

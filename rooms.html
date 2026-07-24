@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rooms — Weligama Bay Eco Villa</title>
+<meta name="description" content="Comfortable A/C and Non-A/C rooms at Weligama Bay Eco Villa — double, triple, family, and garden-view rooms, two minutes from Weligama Beach." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<style>
+  .rooms-hero{
+    position:relative; padding: 170px 0 90px; overflow:hidden;
+    background: linear-gradient(180deg, var(--lagoon-deep), var(--lagoon) 120%);
+    color: var(--foam);
+  }
+  .rooms-hero::before{
+    content:""; position:absolute; inset:0;
+    background: url('assets/porch.jpg') center/cover;
+    opacity: 0.28;
+  }
+  .rooms-hero .container{ position:relative; z-index:1; }
+  .rooms-hero h1{ color:var(--foam); font-size: clamp(2.2rem,4.6vw,3.4rem); max-width:18ch; margin-top:14px; }
+  .rooms-hero p{ margin-top:18px; max-width:52ch; color:rgba(238,247,242,0.78); line-height:1.7; }
+  .rooms-hero .note{
+    margin-top: 26px; display:inline-flex; gap:10px; align-items:center;
+    padding: 12px 18px; border-radius:14px; font-size:0.85rem;
+  }
+
+  .style-section{ padding: 110px 0; }
+  .style-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: clamp(30px,6vw,80px); align-items:center; }
+  .style-grid h2{ font-size: clamp(1.8rem,3.4vw,2.6rem); margin-top:14px; max-width:16ch; }
+  .style-grid p{ margin-top:20px; line-height:1.7; color:rgba(14,43,40,0.72); max-width:46ch; }
+  .style-actions{ display:flex; gap:14px; margin-top:30px; flex-wrap:wrap; }
+  .style-photo{ position:relative; }
+  .style-photo img{ width:100%; aspect-ratio:5/4.4; object-fit:cover; border-radius:24px; box-shadow:0 40px 70px -30px rgba(8,28,26,0.35); }
+
+  .rooms-catalog{ padding: 0 0 110px; }
+  .rooms-catalog .section-head{ margin-bottom:44px; }
+  .room-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .room-tile{
+    border-radius: 22px; overflow:hidden;
+    background: #fff;
+    box-shadow: 0 20px 50px -30px rgba(8,28,26,0.25);
+    transition: transform 0.5s var(--ease-liquid), box-shadow 0.5s ease;
+  }
+  .room-tile:hover{ transform: translateY(-8px); box-shadow: 0 30px 60px -25px rgba(8,28,26,0.35); }
+  .room-tile .thumb{ position:relative; aspect-ratio: 4/3; overflow:hidden; }
+  .room-tile .thumb img{ width:100%; height:100%; object-fit:cover; transition: transform 0.7s var(--ease-liquid); }
+  .room-tile:hover .thumb img{ transform: scale(1.08); }
+  .room-tile .body{ padding: 24px 22px 26px; }
+  .room-tile h3{ font-size:1.2rem; margin-bottom:10px; }
+  .room-tile p.desc{ font-size:0.9rem; line-height:1.6; color:rgba(14,43,40,0.68); margin-bottom:16px; }
+  .tag-row{ display:flex; flex-wrap:wrap; gap:8px; }
+  .tag{
+    font-size:0.72rem; font-weight:700; color: var(--lagoon-deep);
+    background: var(--sand-dim); padding: 6px 12px; border-radius: 999px;
+  }
+  @media (max-width:960px){ .room-grid{ grid-template-columns: 1fr 1fr; } }
+  @media (max-width:640px){ .room-grid{ grid-template-columns: 1fr; } .style-grid{ grid-template-columns:1fr; } }
+
+  .amenities{ padding: 110px 0; background: var(--sand-dim); }
+  .amenities-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap: 24px; margin-top: 50px; }
+  .amenity-card{ padding: 28px 24px; border-radius: 20px; background: #fff; box-shadow: 0 16px 40px -28px rgba(8,28,26,0.3); }
+  .amenity-card .ico{
+    width:48px; height:48px; border-radius:14px; background: var(--lagoon-deep); color:var(--gold-bright);
+    display:flex; align-items:center; justify-content:center; margin-bottom:18px;
+  }
+  .amenity-card h4{ font-size:1.02rem; margin-bottom:8px; }
+  .amenity-card p{ font-size:0.86rem; color:rgba(14,43,40,0.65); line-height:1.55; }
+  @media (max-width:900px){ .amenities-grid{ grid-template-columns:1fr 1fr; } }
+
+  .reserve-band{ padding: 100px 0 120px; text-align:center; }
+  .reserve-band h2{ font-size: clamp(1.8rem,3.4vw,2.6rem); }
+  .reserve-band p{ margin: 18px auto 0; max-width:50ch; color:rgba(14,43,40,0.7); }
+  .reserve-actions{ display:flex; gap:16px; justify-content:center; margin-top:32px; flex-wrap:wrap; }
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<nav class="site-nav glass-dark" id="siteNav">
+  <a href="index.html" class="nav-brand"><span class="dot"></span>Weligama Bay <em style="font-style:italic;opacity:.8;margin-left:4px;">Eco Villa</em></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="packages.html">Packages</a></li>
+    <li><a href="rooms.html" class="active">Rooms</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/94774411513" class="nav-cta">Book on WhatsApp</a>
+  <button class="nav-toggle" aria-label="Open menu">
+    <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+</nav>
+
+<div class="mobile-drawer">
+  <div class="backdrop"></div>
+  <div class="drawer-card glass-dark">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="packages.html">Packages</a>
+    <a href="rooms.html">Rooms</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://wa.me/94774411513" class="drawer-cta">Book on WhatsApp</a>
+  </div>
+</div>
+
+<header class="rooms-hero">
+  <div class="container">
+    <p class="eyebrow" style="color:var(--gold-bright)">Rooms</p>
+    <h1>Relax and unwind in the heart of Weligama.</h1>
+    <p>Enjoy a peaceful stay surrounded by nature, just a short walk from Weligama Beach and beside the beautiful Polwathu River. Whether you're travelling as a couple, family, or solo explorer, our rooms offer comfort, simplicity, and a relaxing atmosphere.</p>
+    <div class="note glass-dark">Check-in time: 14:00 · Call ahead for room availability and same-day booking requests.</div>
+  </div>
+</header>
+
+<section class="style-section">
+  <div class="container style-grid">
+    <div class="reveal">
+      <p class="eyebrow">Room Style</p>
+      <h2>Nature, comfort, and Sri Lankan hospitality.</h2>
+      <p>At Weligama Bay Eco Villa, every room is designed to give you a calm and comfortable experience. Wake up to the sounds of nature, enjoy fresh air from the river, and relax after a day of surfing, whale watching, or exploring Weligama.</p>
+      <div class="style-actions">
+        <a href="contact.html" class="btn btn-solid">Book Your Stay</a>
+        <a href="contact.html" class="btn-line">Contact Us</a>
+      </div>
+    </div>
+    <div class="style-photo reveal-scale">
+      <img src="assets/porch.jpg" alt="Shaded veranda with wooden furniture at Weligama Bay Eco Villa" />
+    </div>
+  </div>
+</section>
+
+<section class="rooms-catalog">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal">Room Options</p>
+        <h2 class="reveal">Choose your stay.</h2>
+      </div>
+    </div>
+    <div class="room-grid stagger">
+
+      <div class="room-tile reveal">
+        <div class="thumb"><img src="assets/standard_double_room.jpg" alt="Standard Double Room"></div>
+        <div class="body">
+          <h3>Standard Double Room</h3>
+          <p class="desc">A comfortable room designed for couples and solo travellers, featuring a large double bed and a peaceful atmosphere for a relaxing stay in Weligama.</p>
+          <div class="tag-row">
+            <span class="tag">Up to 2 Guests</span>
+            <span class="tag">1 Large Double Bed</span>
+            <span class="tag">Garden Access</span>
+            <span class="tag">Free Wi-Fi</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="room-tile reveal">
+        <div class="thumb"><img src="assets/standard_triple_room.jpg" alt="Standard Triple Room"></div>
+        <div class="body">
+          <h3>Standard Triple Room</h3>
+          <p class="desc">Ideal for families or friends travelling together, with two large double beds and extra space to relax.</p>
+          <div class="tag-row">
+            <span class="tag">Up to 4 Guests</span>
+            <span class="tag">2 Large Double Beds</span>
+            <span class="tag">Air Conditioning</span>
+            <span class="tag">Spacious Interior</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="room-tile reveal">
+        <div class="thumb"><img src="assets/doubleroomwithgardenview.jpg" alt="Budget Double Room"></div>
+        <div class="body">
+          <h3>Budget Double Room</h3>
+          <p class="desc">An affordable and cozy room offering everything you need for a comfortable stay near Weligama Beach.</p>
+          <div class="tag-row">
+            <span class="tag">Up to 2 Guests</span>
+            <span class="tag">1 Double Bed</span>
+            <span class="tag">Budget Friendly</span>
+            <span class="tag">Free Wi-Fi</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="room-tile reveal">
+        <div class="thumb"><img src="assets/familyroomwithprivatebathroom.jpg" alt="Family Room with Private Bathroom"></div>
+        <div class="body">
+          <h3>Family Room with Private Bathroom</h3>
+          <p class="desc">A spacious family room with a private bathroom, perfect for small families and groups.</p>
+          <div class="tag-row">
+            <span class="tag">Up to 5 Guests</span>
+            <span class="tag">Private Bathroom</span>
+            <span class="tag">1 Double + 1 Extra-Large Bed</span>
+            <span class="tag">Free Wi-Fi</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="room-tile reveal">
+        <div class="thumb"><img src="assets/doubleroomwithgardenview.jpg" alt="Double Room with Garden View"></div>
+        <div class="body">
+          <h3>Double Room with Garden View</h3>
+          <p class="desc">Wake up to peaceful garden scenery and enjoy a relaxing stay surrounded by nature.</p>
+          <div class="tag-row">
+            <span class="tag">Up to 2 Guests</span>
+            <span class="tag">1 Double Bed</span>
+            <span class="tag">Garden View</span>
+            <span class="tag">Free Wi-Fi</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="room-tile reveal">
+        <div class="thumb"><img src="assets/familyroom.jpg" alt="Family Room"></div>
+        <div class="body">
+          <h3>Family Room</h3>
+          <p class="desc">An affordable and cozy room offering everything you need for a comfortable stay near Weligama Beach.</p>
+          <div class="tag-row">
+            <span class="tag">Up to 4 Guests</span>
+            <span class="tag">2 Double Beds</span>
+            <span class="tag">Family Friendly</span>
+            <span class="tag">Private Bathroom</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="amenities">
+  <div class="container">
+    <p class="eyebrow reveal">Amenities</p>
+    <h2 class="reveal" style="font-size:clamp(1.8rem,3.4vw,2.6rem); margin-top:12px; max-width:18ch;">Everything you need for a relaxing stay.</h2>
+    <div class="amenities-grid stagger">
+      <div class="amenity-card reveal">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 21c2-2 4-2 6 0s4 2 6 0 4-2 6 0M4 12l8-8 8 8M6 12v6M18 12v6"/></svg></div>
+        <h4>2 Minutes from the Beach</h4>
+        <p>Enjoy easy access to Weligama Beach, surfing spots, and beautiful sunsets.</p>
+      </div>
+      <div class="amenity-card reveal">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 14a4 4 0 014-4h8a4 4 0 014 4v4H4z"/><path d="M6 10V6a2 2 0 012-2h0a2 2 0 012 2v1"/></svg></div>
+        <h4>A/C | Non-A/C Rooms</h4>
+        <p>Choose the perfect room option to match your comfort and budget.</p>
+      </div>
+      <div class="amenity-card reveal">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a8 8 0 0116 0M4 11v7a2 2 0 002 2h1v-6H6M18 11v9h1a2 2 0 002-2v-7"/></svg></div>
+        <h4>Home-Cooked Meals</h4>
+        <p>Delicious Sri Lankan dishes and refreshments available on request.</p>
+      </div>
+      <div class="amenity-card reveal">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v6M6 21c0-4 2.5-7 6-9 3.5 2 6 5 6 9"/></svg></div>
+        <h4>Polwathu River &amp; Garden Views</h4>
+        <p>Relax in a peaceful natural setting surrounded by greenery and the nearby river.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reserve-band">
+  <div class="container">
+    <p class="eyebrow reveal" style="justify-content:center;">Reservations</p>
+    <h2 class="reveal">Ready to check availability?</h2>
+    <p class="reveal">Call, WhatsApp, or send us a message directly and we'll confirm your stay the same day.</p>
+    <div class="reserve-actions reveal">
+      <a href="tel:+94777436176" class="btn btn-solid">Call Now</a>
+      <a href="contact.html" class="btn-line">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand">Weligama Bay Eco Villa</div>
+      <p style="max-width:32ch">Surf, stay, and dine with relaxed beachside comfort just minutes from Weligama Bay.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="index.html">Home</a><br>
+      <a href="menu.html">Menu</a><br>
+      <a href="packages.html">Packages</a><br>
+      <a href="rooms.html">Rooms</a><br>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="tel:+94777436176">+94 777 436 176</a><br>
+      <a href="https://wa.me/94774411513">WhatsApp: 077 441 1513</a><br>
+      <p>No. 26 Vijecoon Watta Pelena, Weligama</p>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <p>Check-in from 14:00</p>
+      <p>Reception: 24/7</p>
+      <p>All prices in LKR &amp; USD</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Weligama Bay Eco Villa. All rights reserved.</span>
+    <span>Weligama, Southern Province, Sri Lanka</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
